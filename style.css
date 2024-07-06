@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+body {
+  margin: 0;
+  background-color: #ededed;
+}
+
+#home {
+  background-color: #2042b6;
+}
+.nav {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+}
+.menu {
+  align-items: center;
+  padding: 10px 30px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+.share {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 12px;
+}
+.input {
+  color: white;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 700;
+}
+.home-page {
+  background: url("./images/Asset\ 1@4x\ 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home-content {
+  display: flex;
+}
+
+.state {
+  padding: 0px 50px;
+}
+
+.state-value {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.state-desc {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  background: url("./images/box.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-color: transparent;
+}
+
+.home-title {
+  font-size: 78px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+
+.home-desc {
+  font-size: 21px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+.arrowdown {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 2px 2px 8px #000000;
+  cursor: pointer;
+}
+.nav2 {
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  margin-right: 8px;
+  margin-left: 8px;
+  border-radius: 10px;
+}
+
+.left2 {
+  padding: 10px 30px;
+}
+
+.menu2 {
+  align-items: center;
+  padding: 10px 30px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+.menu-bar2 {
+  height: 25px;
+}
+.share2 {
+  cursor: pointer;
+  border: 1px solid greenyellow;
+  border-radius: 50px;
+  padding: 12px;
+}
+
+.input2 {
+  color: black;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #115cd9;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 700;
+}
+.wppol-two {
+  background-color: #ffffff;
+  padding: 10px;
+}
+.sidebar-left {
+  padding: 2px 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.side-menu {
+  background-color: #eff3f6;
+  padding: 10px 50px;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 20px;
+  height: 550px;
+}
+.side-name {
+  color: #647888;
+  background-color: #eff3f6;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.is-active {
+  color: white;
+  background-color: #2042b6;
+  border-radius: 5px;
+}
+.sign {
+  position: relative;
+  right: 0px;
+}
+.side-title {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+.graph-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: black;
+}
+.unionimg {
+  height: 35px;
+}
+.companies-ttile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+}
+.all-companies {
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.all-name {
+  font-size: 34px;
+}
+.comp-search {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 40px;
+  border: 1px solid #dadada;
+  height: 20px;
+  border-radius: 5px;
+}
+.comp-input {
+  background-color: #f3f3f3;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 2px 20px;
+  height: 12px;
+}
+.comp-table {
+  max-width: 90%;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.tablee {
+  gap: 20px;
+  padding: 2px 20px;
+  margin-bottom: 20px;
+}
+th,
+td {
+  padding: 8px;
+}
+th.sortable::after {
+  content: " \25BC";
+  font-size: 0.8em;
+  position: absolute;
+  padding: 2px;
+}
+th {
+  padding: 12px;
+  background-color: #f3f3f3;
+  gap: 50px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #ddd;
+}
+.comp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.btn1 {
+  background-color: #2042b6;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 5px 10px 10px #888888;
+  border-radius: 50px;
+}
+.potential {
+  padding: 20px 50px;
+}
+.poten-heading {
+  font-size: 48px;
+  font-weight: 400;
+}
+.poten-desc {
+  font-size: 16px;
+  font-weight: 350;
+  max-width: 70%;
+}
+.pot-logo{
+  padding: 30px;
+  align-items: center;
+}
+.poten-img1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pt-img {
+  padding:20px;
+  background-color: #ffffff;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.state-usa {
+  padding: 2px 80px;
+}
+.usa {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.st-yr {
+  border: none;
+  border-radius: 50px;
+  align-items: center;
+  background-color: #2042b6;
+  color: #f3f3f3;
+  font-size: 35px;
+  font-weight: 400;
+  padding: 0px 35px;
+  cursor: pointer;
+}
+.st-desc {
+  font-size: 16px;
+  font-weight: 350;
+}
+.image-slider {
+  background: url("./images/Group\ 364.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
+.ar {
+  padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 4px 10px;
+  }
+  .left {
+    padding: 5px 5px;
+    gap: 5px;
+  }
+  .arrowdown {
+    position: relative;
+    top: 600px;
+    right: 10px;
+
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #000000;
+  }
+  .nav2 {
+    padding: 4px 10px;
+  }
+  .left2 {
+    padding: 5px 5px;
+    gap: 5px;
+  }
+  .logo1 {
+    width: 30px;
+  }
+  .logo2 {
+    width: 50px;
+  }
+  .logo11 {
+    width: 30px;
+  }
+  .logo22 {
+    width: 50px;
+  }
+  .menu {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+  .share {
+    padding: 4px;
+  }
+  .input {
+    font-size: 0.5rem;
+    padding: 5px 8px;
+  }
+  .menu2 {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+  .share2 {
+    padding: 4px;
+  }
+  .input2 {
+    font-size: 0.5rem;
+    padding: 5px 8px;
+  }
+  .graph-title {
+    font-size: 16px;
+  }
+  .side-menu {
+    padding: 5px 20px;
+    width: 80px;
+    border-radius: 10px;
+    height: 650px;
+  }
+  .side-name {
+    color: #647888;
+    background-color: #eff3f6;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .companies-ttile {
+    padding: 2px 10px;
+  }
+  .all-name {
+    font-size: 22px;
+  }
+  .comp-search {
+    padding: 3px 8px;
+    height: 12px;
+    border-radius: 5px;
+  }
+  .comp-input {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+    height: 8px;
+  }
+  .comp-table {
+    max-width: 40%;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .comp-table {
+    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .tablee {
+    gap: 5px;
+    margin-left: -50px;
+    padding: 10px;
+    font-size: 8px;
+  }
+  th,
+  td {
+    padding: 5px;
+  }
+  th.sortable::after {
+    content: " \25BC";
+    font-size: 6px;
+    position: absolute;
+  }
+  th {
+    padding: 5px;
+    background-color: #f3f3f3;
+    gap: 10px;
+    text-align: left;
+  }
+    .btn1 {
+      background-color: #2042b6;
+      color: #ffffff;
+      border: none;
+      font-size: 10px;
+      box-shadow: 5px 10px 10px #888888;
+      border-radius: 50px;
+    }
+    .poten-heading {
+      font-size: 25px;
+    }
+    .poten-desc {
+      font-size: 10px;
+      max-width: 90%;
+    }
+    .poten-img1 {
+      gap: 5px;
+    }
+
+    .pt-img {
+      gap: 5px;
+   padding: 8px;
+      min-height: 15px;
+      min-width: 30px;
+    }
+  }
+
+
+@media only screen and (min-width: 992px) {
+}
