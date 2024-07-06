@@ -288,7 +288,7 @@ tr:hover {
   font-weight: 350;
   max-width: 70%;
 }
-.pot-logo{
+.pot-logo {
   padding: 30px;
   align-items: center;
 }
@@ -298,7 +298,7 @@ tr:hover {
   align-items: center;
 }
 .pt-img {
-  padding:20px;
+  padding: 20px;
   background-color: #ffffff;
   gap: 10px;
   border-radius: 10px;
@@ -349,9 +349,8 @@ tr:hover {
     position: relative;
     top: 600px;
     right: 10px;
-
     border-radius: 50%;
-    box-shadow: 2px 2px 8px #000000;
+    box-shadow: 2px 2px -8px gray;
   }
   .nav2 {
     padding: 4px 10px;
@@ -432,7 +431,6 @@ tr:hover {
     max-width: 40%;
     align-items: center;
     justify-content: center;
-
   }
 
   .comp-table {
@@ -463,33 +461,106 @@ tr:hover {
     gap: 10px;
     text-align: left;
   }
-    .btn1 {
-      background-color: #2042b6;
-      color: #ffffff;
-      border: none;
-      font-size: 10px;
-      box-shadow: 5px 10px 10px #888888;
-      border-radius: 50px;
-    }
-    .poten-heading {
-      font-size: 25px;
-    }
-    .poten-desc {
-      font-size: 10px;
-      max-width: 90%;
-    }
-    .poten-img1 {
-      gap: 5px;
-    }
-
-    .pt-img {
-      gap: 5px;
-   padding: 8px;
-      min-height: 15px;
-      min-width: 30px;
-    }
+  .btn1 {
+    background-color: #2042b6;
+    color: #ffffff;
+    border: none;
+    font-size: 10px;
+    box-shadow: 5px 10px 10px #888888;
+    border-radius: 50px;
+  }
+  .poten-heading {
+    font-size: 25px;
+  }
+  .poten-desc {
+    font-size: 10px;
+    max-width: 90%;
+  }
+  .poten-img1 {
+    gap: 5px;
   }
 
+  .pt-img {
+    gap: 5px;
+    padding: 8px;
+    min-height: 15px;
+    min-width: 30px;
+  }
+}
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .arrowdown {
+    position: relative;
+    top: 570px;
+    right: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px -8px gray;
+  }
+  .graph-title {
+    font-size: 18px;
+  }
+  .side-menu {
+    padding: 5px 20px;
+    width: 150px;
+    height: 550px;
+  }
+  .side-name {
+    color: #647888;
+    background-color: #eff3f6;
+    font-size: 18px;
+  }
+  .poten-heading {
+    font-size: 32px;
+  }
+  .poten-desc {
+    font-size: 12px;
+    max-width: 80%;
+  }
+  .poten-img1 {
+    gap: 8px;
+  }
+
+  .pt-img {
+    gap: 5px;
+    padding: 8px;
+    min-height: 25px;
+    min-width: 50px;
+  }
+  .comp-table {
+    max-width: 50%;
+    justify-content: center;
+  }
+
+  .comp-table {
+    max-width: 80%;
+  }
+  .tablee {
+    gap: 5px;
+    margin-left: -50px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  th,
+  td {
+    padding: 6px;
+  }
+  th.sortable::after {
+    content: " \25BC";
+    font-size: 8px;
+    position: absolute;
+  }
+  th {
+    padding: 5px;
+    background-color: #f3f3f3;
+    gap: 10px;
+    text-align: left;
+  }
+  .btn1 {
+    background-color: #2042b6;
+    color: #ffffff;
+    border: none;
+    font-size: 11px;
+    box-shadow: 5px 10px 10px #888888;
+    border-radius: 50px;
+  }
 }
