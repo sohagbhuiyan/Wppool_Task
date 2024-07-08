@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WOPPOOL</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div id="home">
@@ -71,24 +72,37 @@
         <div class="sidebar-left">
           <div class="side-menu">
             <p onclick="changeColor()" class="side-name is-active">
-              The Index <span class="sign">-</span>
+              The Index <span class="sign"></span>
             </p>
             <p onclick="changeColor()" class="side-name">
-              The Index Tab Two <span class="sign">+</span>
+              The Index Tab Two <span class="sign"></span>
             </p>
             <p onclick="changeColor()" class="side-name">
-              The Index Tab Three<span class="sign">+</span>
+              The Index Tab Three<span class="sign"></span>
             </p>
             <p onclick="changeColor()" class="side-name">
-              The Index Tab Four<span class="sign">+</span>
+              The Index Tab Four<span class="sign"></span>
             </p>
             <p onclick="changeColor()" class="side-name">
-              The Index Tab Five<span class="sign">+</span>
+              The Index Tab Five<span class="sign"></span>
             </p>
           </div>
-          <div class="side-title">
-            <img src="./images/Union.png" alt="union" class="unionimg" />
-            <p class="graph-title">The WPPOOL Index</p>
+          <div class="side-ride">
+            <div class="side-title">
+              <img src="./images/Union.png" alt="union" class="unionimg" />
+              <p class="graph-title">The WPPOOL Index</p>
+              <div class="chart-container">
+                <canvas id="lineChart"></canvas>
+              </div>
+            </div>
+            <!-- <div class="chart-labels">
+              <div class="chart-box">
+                <p class="chart-lb1">+66.2%</p>
+                <p class="chart-desc">WPPOOL <br />Index</p>
+                <img src="./images/vertical.png" alt="" />
+              </div>
+            </div> -->
+          
           </div>
         </div>
       </div>
@@ -252,22 +266,20 @@
         </p>
       </div>
       <div class="pot-logo">
-      <div class="poten-img1">
-        <img src="./images/stripe.png" alt="" class="pt-img" />
-        <img src="./images/klarna.png" alt="" class="pt-img" />
-        <img src="./images/plaid.png" alt="" class="pt-img" />
-        <img src="./images/chkout.png" alt="" class="pt-img" />
-        <img src="./images/rvolut.png" alt="" class="pt-img" />
-      </div>
-      <div class="poten-img1">
-        <img src="./images/chime.png" alt="" class="pt-img" />
-        <img src="./images/n26.png" alt="" class="pt-img" />
-        <img src="./images/brex.png" alt="" class="pt-img" />
-        <img src="./images/deel.png" alt="" class="pt-img" />
-        <img src="./images/gusto.png" alt="" class="pt-img" />
+        <div class="poten-img1">
+          <img src="./images/stripe.png" alt="" class="pt-img" />
+          <img src="./images/klarna.png" alt="" class="pt-img" />
+          <img src="./images/plaid.png" alt="" class="pt-img" />
+          <img src="./images/chkout.png" alt="" class="pt-img" />
+          <img src="./images/rvolut.png" alt="" class="pt-img" />
+          <img src="./images/chime.png" alt="" class="pt-img" />
+          <img src="./images/n26.png" alt="" class="pt-img" />
+          <img src="./images/brex.png" alt="" class="pt-img" />
+          <img src="./images/deel.png" alt="" class="pt-img" />
+          <img src="./images/gusto.png" alt="" class="pt-img" />
+        </div>
       </div>
     </div>
-  </div>
     <div class="state-usa">
       <h1 class="usa">State of USA</h1>
       <button class="st-yr">
@@ -279,9 +291,239 @@
         Click through the slides or download the report to view natively on your
         device.
       </p>
-      <div class="image-slider">
-        <div>
-          
+    </div>
+    <div class="image-slider">
+      <div class="slider-img">
+        <img src="./images/rgegdg.png" alt="" class="slidimg1 fade" />
+        <img src="./images/rhrdgd.png" alt="" class="slidimg1 fade" />
+        <img src="./images/dehjtfgdt.png" alt="" class="slidimg1 fade" />
+      </div>
+      <div class="button-slider">
+        <div class="slider-btn">
+          <a class="prev">
+            <img
+              src="./images/arrowleft.png"
+              alt=""
+              onclick="plusSlides(-1)"
+              class="left-arrow"
+          /></a>
+          <a class="next"
+            ><img
+              src="./images/arrowright.png"
+              alt=""
+              onclick="plusSlides(1)"
+              class="left-arrow"
+          /></a>
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+        <div class="pages">
+          <p>Pages</p>
+          <button class="page">1 and 2</button>
+          <p>of 37</p>
+        </div>
+        <button class="report">Download the 2023 Report</button>
+      </div>
+    </div>
+
+    <div class="Stories & Ideas">
+      <div class="stories-title">
+        <h1 class="story-title">Stories & Ideas</h1>
+        <p class="story-desc">The latest news & updates</p>
+      </div>
+      <div class="card2">
+        <div class="card-show">
+          <div class="card">
+            <img
+              src="./images/image 97.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Sahabuddin Sagor</p>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/image 98.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Nayem Khan</p>
+              <p class="description">Lorem ipsum dolor sit amet consectetur</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/image 97.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Sahabuddin Sagor</p>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-show">
+          <div class="card">
+            <img
+              src="./images/image 97.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Sahabuddin Sagor</p>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/image 98.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Nayem Khan</p>
+              <p class="description">Lorem ipsum dolor sit amet consectetur</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/image 97.png"
+              alt="Profile Image"
+              class="profile-img"
+            />
+            <div class="card-content">
+              <p class="author">By: Sahabuddin Sagor</p>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" />
+    <div class="about">
+      <div class="ab-text">
+        <h1 class="ab-title">About WPPOOL</h1>
+        <p class="ab-desc">Investing in wppool for over 50 years</p>
+        <p class="ab-desc2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia,molestiae quas vel sint commodi repudiandae consequuntur
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
+          accusantium nemo autem.
+        </p>
+        <a href="/"><button class="ab-btn">Contact WPPOOLL</button></a>
+      </div>
+      <div>
+        <img src="./images/Group 585.png" alt="img" class="about-img" />
+      </div>
+    </div>
+    <hr class="hr" />
+    <div class="last-banner">
+      <h1 class="lb-title">Selected WPPOOL Portfolio Companies</h1>
+      <div class="lb-banners">
+        <img src="./images/alibaba.png" alt="" class="lb-img" />
+        <img src="./images/vendr.png" alt="" class="lb-img" />
+        <img src="./images/vestwel.png" alt="" class="lb-img" />
+        <img src="./images/snapdoc.png" alt="" class="lb-img" />
+        <img src="./images/vendr.png" alt="" class="lb-img" />
+        <img src="./images/snapdoc.png" alt="" class="lb-img" />
+        <img src="./images/toast.png" alt="" class="lb-img" />
+        <img src="./images/image 52.png" alt="" class="lb-img" />
+        <img src="./images/image 52.png" alt="" class="lb-img" />
+        <img src="./images/image 54.png" alt="" class="lb-img" />
+        <img src="./images/flywire.png" alt="" class="lb-img" />
+        <img src="./images/quovo_logo.png" alt="" class="lb-img" />
+        <img src="./images/spends.png" alt="" class="lb-img" />
+        <img src="./images/nota.png" alt="" class="lb-img" />
+        <img src="./images/Recurly.png" alt="" class="lb-img" />
+        <img src="./images/fireblock.png" alt="" class="lb-img" />
+        <img src="./images/kensho.png" alt="" class="lb-img" />
+        <img src="./images/futureAdvs.png" alt="" class="lb-img" />
+        <img src="./images/argyle.png" alt="" class="lb-img" />
+        <img src="./images/ss.png" alt="" class="lb-img" />
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="ft-1">
+        <p class="ft-title">
+          Experience remarkable WordPress products with a new level of power,
+          beauty, and human-centered designs
+        </p>
+        <p class="ft-dialg">©2024 Terms of Use Privacy Policy</p>
+        <p class="ft-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia,molestiae quas vel sint commodi repudiandae consequuntur
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
+          accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
+          molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
+          officia aut! Impedit sit sunt quaera
+        </p>
+      </div>
+      <div class="ft-2">
+        <p class="ft2-rw-1">Jump to</p>
+        <p class="ft2-rows">About Us</p>
+        <p class="ft2-rows">Portfolio</p>
+        <p class="ft2-rows">News</p>
+        <p class="ft2-rows">Stories</p>
+        <p class="ft2-rows">Jobs</p>
+        <p class="ft2-rows">About Us</p>
+      </div>
+      <div class="ft-3">
+        <h1 class="ft3-title1">Cambridge</h1>
+        <p class="ft3-desc1">
+          70728 Yost Burg, <br />
+          North Magdaleneview, <br />
+          UT 97952-2814brbr
+        </p>
+        <hr class="hr-ft" />
+        <br />
+        <h1 class="ft3-title1">London</h1>
+        <p class="ft3-desc1">
+          Suite 292 903 Stehr Streets,<br />
+          Langworthtown, SC 94577-9465
+        </p>
+        <hr class="hr-ft" />
+        <br />
+        <h1 class="ft3-title1">San Francisco</h1>
+        <p class="ft3-desc1">
+          19837 Gilberto Lodge, <br />
+          Lake Kendallville, <br />
+          Colorado - 97392, Bhutan
+        </p>
+        <hr class="hr-ft" />
+        <div class="foter-img">
+          <a href="/">
+            <img src="./images/linkedin.png" alt="" class="ft-img" />
+            <img src="./images/twitter.png" alt="" class="ft-img" />
+          </a>
         </div>
       </div>
     </div>
