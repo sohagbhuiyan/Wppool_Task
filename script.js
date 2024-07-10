@@ -1,3 +1,34 @@
+window.addEventListener('scroll', function () {
+  const nav = document.getElementById('nav');
+  const nav2 = document.getElementById('nav2');
+  if (window.scrollY > 590) {
+    nav.style.display = 'none';
+    nav2.style.display = 'flex';
+  } else {
+    nav.style.display = 'flex';
+    nav2.style.display = 'none';
+  }
+});
+
+//-------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  const menuButton = document.getElementById('mobile-menu');
+  const closeButton = document.getElementById('closebtn');
+  const menuButton2 = document.getElementById('mobile-menu2');
+  const navbar = document.getElementById('navbar');
+
+  menuButton.addEventListener('click', function () {
+    navbar.style.display = 'block';
+  });
+
+  menuButton2.addEventListener('click', function () {
+    navbar.style.display = 'block';
+  });
+  closeButton.addEventListener('click', function () {
+    navbar.style.display = 'none';
+  });
+});
+//--------------------------
 const pages = document.querySelectorAll(".side-name");
 
 pages.forEach((item) => {
@@ -12,9 +43,11 @@ function active_item() {
 }
 //------------slider------------
 let slideIndex = 1;
-showSlides(slideIndex);
+// showSlides(slideIndex);
+let translatePercentage = 0; // Start with the initial translation percentage
 
 function plusSlides(n) {
+  translatePercentage += n * 33;
   showSlides(slideIndex += n);
 }
 
@@ -25,14 +58,15 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slidimg1");
+  let slidesAll = document.querySelector(".slider-img");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+
+  slidesAll.style.transform = `translate(${translatePercentage}%)`;
+  console.log(slidesAll.style, "------------")
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("active", "");
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
@@ -46,25 +80,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     datasets: [
       {
         label: 'WPPOOL',
-        data: [0, 10, 20, 30, 40, 50, 60],
+        data: [2, 10, 5, 37, 76, 17, 20,],
         borderColor: '#FF5733',
         fill: false,
       },
       {
         label: 'Google',
-        data: [0, 15, 30, 45, 60, 75, 90],
+        data: [9, 2, 19, 64, 14, 28, 47],
         borderColor: '#4B77BE',
         fill: false,
       },
       {
         label: 'Microsoft',
-        data: [0, 20, 40, 60, 80, 100, 120],
+        data: [7, 9, 18, 45, 16, 85, 20],
         borderColor: '#33FF57',
         fill: false,
       },
       {
         label: 'Twitter',
-        data: [0, 5, 10, 15, 20, 25, 30],
+        data: [0, 35, 20, 45, 20, 5, 89],
         borderColor: '#9B59B6',
         fill: false,
       }
@@ -116,3 +150,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const myChart = new Chart(ctx, config);
 });
+

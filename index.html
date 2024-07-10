@@ -8,29 +8,59 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <div id="home">
-      <div class="nav">
-        <div class="left">
-          <img src="./images/wp.png" alt="logo" class="logo1" />
-          <img src="./images/Group 182.png" alt="wppool" class="logo2" />
-        </div>
-        <div class="menu">
-          <img src="./images/share.png" alt="share" class="share" />
-          <input
-            type="text"
-            class="input"
-            placeholder="Download the 2024 Report"
-          />
-          <img src="./images/menu.png" alt="menu" class="menu-bar" />
+    <nav class="nav" id="nav">
+      <div class="left">
+        <img src="./images/wp.png" alt="logo" class="logo1" />
+        <img src="./images/Group 182.png" alt="wppool" class="logo2" />
+      </div>
+      <div class="menu">
+        <img src="./images/share.png" alt="share" class="share" />
+        <button class="text">Download the 2024 Report</button>
+        <img src="./images/menu.png" alt="menu" class="menu-bar" id="mobile-menu" />
+      </div>
+    </nav>
+    <nav class="nav2" id="nav2">
+      <div class="left2">
+        <img src="./images/wp.png" alt="logo" class="logo11" />
+        <img src="./images/wph.png" alt="wppool" class="logo22" />
+      </div>
+      <div class="menu2">
+        <img src="./images/share2.png" alt="share" class="share2" />
+        <input
+          type="text2"
+          class="input2"
+          placeholder="Download the 2024 Report"
+        />
+        <img src="./images/menu2.png" alt="menu" class="menu-bar2" id="mobile-menu2"/>
+      </div>
+    </nav>
+    <div class="background" id="home">
+      <div class="navbar"id="navbar" >
+        <div class="navbar-top">
+          <img src="./images/sharefill.png" alt="">
+          <button class="dwn">Download the 2024 Report</button>
           <img
-            src="./images/arrow_downward_alt.png"
-            alt="arrow "
-            class="arrowdown"
+            src="./images/cross.png"
+            alt=""
+            class="close-btn"
+            id="closebtn"
           />
+        </div>
+        <div class="sub-menu" id="sub-menu">
+          <p class="list">The WPPOOL Index</p>
+          <p class="list">All Companies</p>
+          <p class="list">Potential Future Listings</p>
+          <p class="list">State of USA</p>
+          <p class="list">Stories & Ideas</p>
+          <p class="list">About WPPOOL</p>
+          <p class="list">WPPOOL Portfolio Companies</p>
+          <p class="listlast">Visit WPPOOL</p>
         </div>
       </div>
 
+
       <div class="home-page">
+
         <div class="home-content">
           <div class="state">
             <p class="state-value">60</p>
@@ -50,24 +80,16 @@
             </p>
           </div>
         </div>
+        <img
+        src="./images/arrow_downward_alt.png"
+        alt="arrow "
+        class="arrowdown"
+        id="arrowdown"
+      />
       </div>
     </div>
+
     <div class="wppol-two">
-      <div class="nav2">
-        <div class="left2">
-          <img src="./images/wp.png" alt="logo" class="logo11" />
-          <img src="./images/wph.png" alt="wppool" class="logo22" />
-        </div>
-        <div class="menu2">
-          <img src="./images/share2.png" alt="share" class="share2" />
-          <input
-            type="text2"
-            class="input2"
-            placeholder="Download the 2024 Report"
-          />
-          <img src="./images/menu2.png" alt="menu" class="menu-bar2" />
-        </div>
-      </div>
       <div class="side">
         <div class="sidebar-left">
           <div class="side-menu">
@@ -89,20 +111,36 @@
           </div>
           <div class="side-ride">
             <div class="side-title">
-              <img src="./images/Union.png" alt="union" class="unionimg" />
+              <img src="./images/Union.png" alt="" class="unionimg" />
               <p class="graph-title">The WPPOOL Index</p>
-              <div class="chart-container">
-                <canvas id="lineChart"></canvas>
+             
+            </div>
+            <div class="cards-all">
+            <div class="card-state">
+              <div class="percentage1">+66.2%</div>
+              <div class="card-name">
+                  <span>WPPOOL</span>
+                  <span>Index</span>
               </div>
             </div>
-            <!-- <div class="chart-labels">
-              <div class="chart-box">
-                <p class="chart-lb1">+66.2%</p>
-                <p class="chart-desc">WPPOOL <br />Index</p>
-                <img src="./images/vertical.png" alt="" />
+              <div class="card-state">
+                <div class="percentage2">+66.2%</div>
+                <div class="card-name">
+                    <span>Google</span>
+                    <span>Index</span>
+                </div>
+            </div>
+            <div class="card-state">
+              <div class="percentage3">+66.2%</div>
+              <div class="card-name">
+                  <span>Microsoft</span>
               </div>
-            </div> -->
-          
+          </div>    
+          </div>
+          <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -111,7 +149,7 @@
       <div class="companies-ttile">
         <p class="all-name">All Companies</p>
         <div class="comp-search">
-          <img src="./images/search.png" alt="" />
+          <img src="./images/search.png" alt="" class="search"/>
           <input
             type="text"
             name=""
@@ -124,7 +162,7 @@
         <table class="tablee">
           <thead>
             <tr>
-              <th>Company</th>
+              <th class="company">Company</th>
               <th class="sortable">Ticker</th>
               <th>Vertical</th>
               <th>Price</th>
@@ -527,6 +565,7 @@
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
