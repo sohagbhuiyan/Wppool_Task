@@ -327,7 +327,6 @@ body {
 }
 .unionimg {
   height: 35px;
-  position: absolute;
 }
 
 .chart-labels {
@@ -343,12 +342,7 @@ body {
   border: none;
   display: flex;
 }
-.chart-container {
-  width: 90%;
-}
-.lineChart2 {
-  width: 90%;
-}
+
 .chart-lb1 {
   color: #fc714d;
   font-size: 5px;
@@ -885,7 +879,7 @@ tr:hover {
     background-color: transparent;
     border-radius: 50px;
     border: 1px solid white;
-    padding: 5px 8px;
+    padding: 7px 8px;
     outline: none;
     font-weight: 400;
   }
@@ -901,8 +895,8 @@ tr:hover {
   .arrowdown {
     position: absolute;
     padding: 4px;
-    right: 10px;
-    top: 370px;
+    right: 12px;
+    top: 320px;
     border-radius: 50%;
     box-shadow: 2px 2px -8px gray;
   }
@@ -946,6 +940,8 @@ tr:hover {
   .input2 {
     font-size: 0.5rem;
     padding: 5px 8px;
+  }.story-title {
+    font-size: 32px;
   }
   .graph-title {
     font-size: 16px;
@@ -974,11 +970,11 @@ tr:hover {
     border-radius: 5px;
   }
   .comp-input {
-    font-size: 12px;
+    font-size: 10px;
     border: none;
     outline: none;
-    padding: 2px 10px;
-    height: 8px;
+    padding: 2px ;
+    height: 10px;
   }
   .comp-table {
     max-width: 90%;
@@ -1018,10 +1014,10 @@ tr:hover {
     background-color: #2042b6;
     color: #ffffff;
     border: none;
-    font-size: 9px;
-    box-shadow: 5px 10px 10px #888888;
+    font-size: 10px;
+    box-shadow: 2px 10px 20px #a7a7a7;
     border-radius: 50px;
-    padding: 4px 8px;
+    padding: 8px 15px;
   }
   .poten-heading {
     font-size: 25px;
@@ -1072,7 +1068,8 @@ tr:hover {
     padding: 2px 14px;
   }
   .report {
-    font-size: 6px;
+    font-size: 9px;
+    padding: 5px 35px;
   }
   .stories-title {
     padding: 10px;
@@ -1083,6 +1080,11 @@ tr:hover {
     gap: 5px;
   padding: 10px;
 
+  }
+  .usa {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 10px;
   }
   .card {
     padding: 10px 12px;
@@ -1109,12 +1111,12 @@ tr:hover {
     padding: 18px 20px;
   }
   .card-state {
-    display: inline-flexbox;
+    padding: 40px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 5px;
-    width: 70px;
+    font-size: 8px;
+
   }
 
   .cards-all {
@@ -1124,7 +1126,7 @@ tr:hover {
     padding: 15px;
   }
   .card-state {
-    padding: 2px 5px;
+    padding: 5px ;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -1141,6 +1143,12 @@ tr:hover {
     font-size: 12px;
     margin-right: 2px;
   }
+  .st-yr {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 6px 15px;
+    cursor: pointer;
+  }
 
   .card-namespan:first-child {
     font-weight: bold;
@@ -1152,9 +1160,9 @@ tr:hover {
   }
 
   .card-state::after {
-    width: 3px;
-    height: 10px;
-    margin-left: 2px;
+    width: 2px;
+    height: 14px;
+    margin-left:15px;
   }
 
   .page {
@@ -1562,6 +1570,9 @@ tr:hover {
   }
   .ft2-rw-1 {
     font-size: 12px;
+  }
+  .dot {
+    display: none;
   }
 
   .ft2-rows {
